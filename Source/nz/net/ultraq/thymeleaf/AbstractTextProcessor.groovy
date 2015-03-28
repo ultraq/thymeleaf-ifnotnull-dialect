@@ -78,9 +78,12 @@ abstract class AbstractTextProcessor extends AbstractAttrProcessor {
 			outputNode.processable = false
 			element.clearChildren()
 			element.addChild(outputNode)
+			element.removeAttribute(attributeName)
+		}
+		else {
+			element.parent.removeChild(element)
 		}
 
-		element.removeAttribute(attributeName)
 		return ProcessorResult.OK
 	}
 }
