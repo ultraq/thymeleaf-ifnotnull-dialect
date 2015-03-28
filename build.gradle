@@ -1,0 +1,28 @@
+/**
+ * Gradle build script for the Thymeleaf If-Not-Null Dialect project.
+ * 
+ * @author Emanuel Rabina
+ */
+
+apply plugin: 'groovy'
+apply plugin: 'maven'
+apply from: 'https://raw.github.com/ultraq/gradle-support/1.1/gradle-support.gradle'
+apply from: 'https://raw.github.com/ultraq/gradle-support/1.1/maven-support.gradle'
+apply from: 'https://raw.github.com/ultraq/gradle-support/1.1/bundle.gradle'
+
+//project.name = 'Thymeleaf If-Not-Null Dialect'
+project.description = 'Output elements and values only if the value exist'
+project.archivesBaseName = 'thymeleaf-ifnotnull-dialect'
+project.sourceCompatibility = '1.7'
+
+project.group    = 'nz.net.ultraq.thymeleaf'
+project.artifact = 'thymeleaf-ifnotnull-dialect'
+project.version  = '1.0.0-SNAPSHOT'
+project.year     = '2015'
+
+dependencies {
+	compile(
+		'org.codehaus.groovy:groovy:2.3.7',
+		'org.thymeleaf:thymeleaf:2.1.4.RELEASE'
+	)
+}
