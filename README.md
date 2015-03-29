@@ -5,8 +5,8 @@ Thymeleaf If-Not-Null Dialect
 A dialect that outputs elements and values only if the value exist.  It's
 basically a combination of `th:if` with `th:text`/`th:utext`.
 
- - Current version: 1.0.0-SNAPSHOT
- - Released: ?? ??? 2015
+ - Current version: 1.0.0
+ - Released: 29 March 2015
 
 
 Installation
@@ -57,8 +57,8 @@ templates, adding 2 new utility methods you can use in your pages: `text`, and
 
 ### text
 
-A combination of `th:if` and `th:text`, runs the expression given to it and if
-it's not `null`, will output both the element and the result of the expression
+A combination of `th:if` and `th:text`, runs the expression given to it and, if
+it's not `null`, outputs both the element and the result of the expression
 as a text node of the element.
 
 ```html
@@ -71,7 +71,7 @@ as a text node of the element.
 
 ### utext
 
-A combination of `th:if` and `th:utext`
+Same as above, but prints unescaped text instead.
 
 ```html
 <html xmlns:ifnotnull="http://www.ultraq.net.nz/thymeleaf/ifnotnull">
