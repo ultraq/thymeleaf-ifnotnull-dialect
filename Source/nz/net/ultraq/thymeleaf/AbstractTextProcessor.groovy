@@ -71,10 +71,9 @@ abstract class AbstractTextProcessor extends AbstractAttrProcessor {
 
 		def output = parser.parseExpression(configuration, arguments, value)
 			.execute(configuration, arguments, executionContext)
-			.toString()
 
 		if (output != null) {
-			def outputNode = outputNodeForText(output)
+			def outputNode = outputNodeForText(output.toString())
 			outputNode.processable = false
 			element.clearChildren()
 			element.addChild(outputNode)
