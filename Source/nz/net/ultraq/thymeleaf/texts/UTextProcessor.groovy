@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package nz.net.ultraq.thymeleaf
+package nz.net.ultraq.thymeleaf.texts
 
 import org.thymeleaf.dom.Macro
 import org.thymeleaf.dom.Node

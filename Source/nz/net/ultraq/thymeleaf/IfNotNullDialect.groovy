@@ -16,6 +16,9 @@
 
 package nz.net.ultraq.thymeleaf
 
+import nz.net.ultraq.thymeleaf.texts.TextProcessor
+import nz.net.ultraq.thymeleaf.texts.UTextProcessor
+
 import org.thymeleaf.dialect.AbstractDialect
 import org.thymeleaf.processor.IProcessor
 

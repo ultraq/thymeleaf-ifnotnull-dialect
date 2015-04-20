@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package nz.net.ultraq.thymeleaf
+package nz.net.ultraq.thymeleaf.texts
 
 import org.thymeleaf.Arguments
 import org.thymeleaf.dom.Element
@@ -70,9 +70,8 @@ abstract class AbstractTextProcessor extends AbstractAttrProcessor {
 		def value = element.getAttributeValue(attributeName)
 
 		def output = parser.parseExpression(configuration, arguments, value)
-			.execute(configuration, arguments, executionContext)
-
-		if (output != null) {
+				.execute(configuration, arguments, executionContext)
+		if (output) {
 			def outputNode = outputNodeForText(output.toString())
 			outputNode.processable = false
 			element.clearChildren()

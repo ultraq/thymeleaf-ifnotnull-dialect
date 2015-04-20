@@ -5,8 +5,8 @@ Thymeleaf If-Not-Null Dialect
 A dialect that outputs elements and values only if the value exist.  It's
 basically a combination of `th:if` with `th:text`/`th:utext`.
 
- - Current version: 1.0.0
- - Released: 29 March 2015
+ - Current version: 1.1.0
+ - Released: ?? ??? 2015
 
 
 Installation
@@ -24,7 +24,7 @@ Add a dependency to your project with the following co-ordinates:
 
  - GroupId: `nz.net.ultraq.thymeleaf`
  - ArtifactId: `thymeleaf-ifnotnull-dialect`
- - Version: `1.0.0`
+ - Version: `1.0.1`
 
 
 Usage
@@ -84,6 +84,9 @@ Same as above, but prints unescaped text instead.
 
 Changelog
 ---------
+
+### 1.1.0
+ - Add dialect metadata file for the Eclipse plugin
 
 ### 1.0.0
  - Initial release
