@@ -22,7 +22,12 @@ project.year     = '2015'
 
 dependencies {
 	compile(
-		'org.codehaus.groovy:groovy:2.3.7',
+		'org.codehaus.groovy:groovy:2.4.3',
 		'org.thymeleaf:thymeleaf:2.1.4.RELEASE'
+	)
+	testCompile(
+		'junit:junit:4.12',
+		'nz.net.ultraq.thymeleaf:thymeleaf-testing-junit:1.0.0-SNAPSHOT',
+		'org.thymeleaf:thymeleaf-testing:2.1.4.RELEASE'
 	)
 }

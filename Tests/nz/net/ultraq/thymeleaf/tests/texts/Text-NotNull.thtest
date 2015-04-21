@@ -1,0 +1,23 @@
+# Test that the text which is present is output 
+
+%TEMPLATE_MODE HTML5
+
+%CONTEXT
+value = "Something"
+
+%INPUT
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ifnotnull="http://www.ultraq.net.nz/thymeleaf/ifnotnull">
+	<body>
+		<p ifnotnull:text="${value}"></p>
+	</body>
+</html>
+
+%OUTPUT
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<body>
+		<p>Something</p>
+	</body>
+</html>

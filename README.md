@@ -87,6 +87,8 @@ Changelog
 
 ### 1.0.1
  - Add dialect metadata file for the Eclipse plugin
+ - Add tests using new [Thymeleaf Testing JUnit](https://github.com/ultraq/thymeleaf-testing-junit)
+   bridge
 
 ### 1.0.0
  - Initial release
