@@ -6,7 +6,7 @@ A dialect that outputs elements and values only if the value exist.  It's
 basically a combination of `th:if` with `th:text`/`th:utext`.
 
  - Current version: 1.0.1
- - Released: ?? ??? 2015
+ - Released: 22 April 2015
 
 
 Installation
