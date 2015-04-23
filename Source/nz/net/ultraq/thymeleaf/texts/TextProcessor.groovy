@@ -28,21 +28,14 @@ import org.thymeleaf.standard.processor.attr.StandardTextAttrProcessor
  */
 class TextProcessor extends AbstractTextProcessor {
 
+	final int precedence = StandardTextAttrProcessor.ATTR_PRECEDENCE + 1
+
 	/**
 	 * Constructor, set this processor to work on the 'text' attribute.
 	 */
 	TextProcessor() {
 
 		super('text')
-	}
-
-	/**
-	 * {@inheritDoc}
-	 */
-	@Override
-	int getPrecedence() {
-
-		return StandardTextAttrProcessor.ATTR_PRECEDENCE + 1
 	}
 
 	/**

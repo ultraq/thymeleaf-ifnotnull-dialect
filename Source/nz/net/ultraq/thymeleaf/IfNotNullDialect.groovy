@@ -29,24 +29,9 @@ import org.thymeleaf.processor.IProcessor
  */
 class IfNotNullDialect extends AbstractDialect {
 
-	/**
-	 * {@inheritDoc}
-	 */
-	@Override
-	String getPrefix() {
-
-		return 'ifnotnull'
-	}
-
-	/**
-	 * {@inheritDoc}
-	 */
-	@Override
-	Set<IProcessor> getProcessors() {
-
-		return [
-		    new TextProcessor(),
-			new UTextProcessor()
-		]
-	}
+	final String prefix = 'ifnotnull'
+	final Set<IProcessor> processors = [
+		new TextProcessor(),
+		new UTextProcessor()
+	]
 }

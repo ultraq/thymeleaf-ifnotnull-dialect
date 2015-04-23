@@ -29,21 +29,14 @@ import org.thymeleaf.standard.processor.attr.StandardUtextAttrProcessor
  */
 class UTextProcessor extends AbstractTextProcessor {
 
+	final int precedence = StandardUtextAttrProcessor.ATTR_PRECEDENCE + 1
+
 	/**
 	 * Constructor, set this processor to work on the 'utext' attribute.
 	 */
 	UTextProcessor() {
 
 		super('utext', StandardExpressionExecutionContext.UNESCAPED_EXPRESSION)
-	}
-
-	/**
-	 * {@inheritDoc}
-	 */
-	@Override
-	int getPrecedence() {
-
-		return StandardUtextAttrProcessor.ATTR_PRECEDENCE + 1
 	}
 
 	/**
