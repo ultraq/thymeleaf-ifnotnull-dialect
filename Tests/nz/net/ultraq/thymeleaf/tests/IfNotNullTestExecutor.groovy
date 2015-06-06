@@ -17,7 +17,7 @@
 package nz.net.ultraq.thymeleaf.tests
 
 import nz.net.ultraq.thymeleaf.IfNotNullDialect
-import nz.net.ultraq.thymeleaf.testing.JUnitTestExecutor
+import nz.net.ultraq.thymeleaf.testing.JUnitTestExecutorAll
 
 import org.thymeleaf.dialect.IDialect
 import org.thymeleaf.standard.StandardDialect
@@ -27,7 +27,7 @@ import org.thymeleaf.standard.StandardDialect
  * 
  * @author Emanuel Rabina
  */
-class IfNotNullTestExecutor extends JUnitTestExecutor {
+class IfNotNullTestExecutor extends JUnitTestExecutorAll {
 
 	final List<IDialect> testDialects = [
 		new StandardDialect(),
