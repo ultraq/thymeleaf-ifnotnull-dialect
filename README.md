@@ -53,9 +53,8 @@ Spring XML configuration example:
 </bean>
 ```
 
-This will introduce the `ifnotnull` expression object to your Thymeleaf
-templates, adding 2 new utility methods you can use in your pages: `text`, and
-`utext`.
+This will introduce the `ifnotnull` namepace, and 2 new attribute processors
+that you can use in your pages: `text`, and `utext`.
 
 ### text
 
