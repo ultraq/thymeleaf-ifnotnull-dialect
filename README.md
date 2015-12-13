@@ -32,7 +32,7 @@ Add a dependency to your project with the following co-ordinates:
 Usage
 -----
 
-Add the Joda dialect to your existing Thymeleaf template engine, eg:
+Add the If-Not-Null dialect to your existing Thymeleaf template engine, eg:
 
 Java example:
 
