@@ -2,19 +2,20 @@
 Thymeleaf If-Not-Null Dialect
 =============================
 
-[![Build Status](https://travis-ci.org/ultraq/thymeleaf-ifnotnull-dialect.svg?branch=master)](https://travis-ci.org/ultraq/thymeleaf-ifnotnull-dialect)
+[![Build Status](https://travis-ci.org/ultraq/thymeleaf-ifnotnull-dialect.svg?branch=dev)](https://travis-ci.org/ultraq/thymeleaf-ifnotnull-dialect)
 
 A dialect that outputs elements and values only if the value exist.  It's
 basically a combination of `th:if` with `th:text`/`th:utext`.
 
- - Current version: 1.0.3
- - Released: 13 December 2015
+ - Current version: 2.0.0-SNAPSHOT
+ - Released: ?? ??? ????
 
 
 Installation
 ------------
 
-Minimum of Java 7 required.
+Minimum of Java 7 and Thymeleaf 3.0 required.  If you're looking for a version
+of this dialect for Thymeleaf 2.1, use the 1.0 releases instead.
 
 ### Standalone distribution
 Copy the JAR from [the latest release bundle](https://github.com/ultraq/thymeleaf-ifnotnull-dialect/releases),
@@ -26,7 +27,7 @@ Add a dependency to your project with the following co-ordinates:
 
  - GroupId: `nz.net.ultraq.thymeleaf`
  - ArtifactId: `thymeleaf-ifnotnull-dialect`
- - Version: `1.0.3`
+ - Version: `2.0.0-SNAPSHOT`
 
 
 Usage
@@ -63,11 +64,7 @@ it's not `null`, outputs both the element and the result of the expression
 as a text node of the element.
 
 ```html
-<html xmlns:ifnotnull="http://www.ultraq.net.nz/thymeleaf/ifnotnull">
-  ...
-  <div ifnotnull:text="${myObject.someProperty}"></div>
-  ...
-</html>
+<div ifnotnull:text="${myObject.someProperty}"></div>
 ```
 
 ### utext
@@ -75,9 +72,5 @@ as a text node of the element.
 Same as above, but prints unescaped text instead.
 
 ```html
-<html xmlns:ifnotnull="http://www.ultraq.net.nz/thymeleaf/ifnotnull">
-  ...
-  <div ifnotnull:utext="${myObject.someProperty}"></div>
-  ...
-</html>
+<div ifnotnull:utext="${myObject.someProperty}"></div>
 ```

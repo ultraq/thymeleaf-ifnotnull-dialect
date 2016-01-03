@@ -4,8 +4,7 @@
 
 %INPUT
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:ifnotnull="http://www.ultraq.net.nz/thymeleaf/ifnotnull">
+<html>
 	<body>
 		<p ifnotnull:text="${value}"></p>
 	</body>
@@ -13,7 +12,7 @@
 
 %OUTPUT
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 	<body>
 	</body>
 </html>

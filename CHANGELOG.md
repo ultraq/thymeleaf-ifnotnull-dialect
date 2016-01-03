@@ -2,6 +2,9 @@
 Changelog
 =========
 
+### 2.0.0
+ - Dialect updated to work with Thymeleaf 3.0
+
 ### 1.0.3
  - Update [Thymeleaf Testing JUnit](https://github.com/ultraq/thymeleaf-testing-junit)
    again.
