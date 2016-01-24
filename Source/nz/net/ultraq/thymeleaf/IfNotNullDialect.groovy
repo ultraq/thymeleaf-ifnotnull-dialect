@@ -46,6 +46,7 @@ class IfNotNullDialect extends AbstractProcessorDialect {
 	/**
 	 * {@inheritDoc}
 	 */
+	@Override
 	Set<IProcessor> getProcessors(String dialectPrefix) {
 
 		return [
