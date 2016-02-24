@@ -50,9 +50,9 @@ class IfNotNullDialect extends AbstractProcessorDialect {
 	Set<IProcessor> getProcessors(String dialectPrefix) {
 
 		return [
-			new StandardXmlNsTagProcessor(this, TemplateMode.HTML, dialectPrefix),
-		    new TextProcessor(this, dialectPrefix),
-			new UTextProcessor(this, dialectPrefix)
+			new StandardXmlNsTagProcessor(TemplateMode.HTML, dialectPrefix),
+			new TextProcessor(dialectPrefix),
+			new UTextProcessor(dialectPrefix)
 		] as Set
 	}
 }

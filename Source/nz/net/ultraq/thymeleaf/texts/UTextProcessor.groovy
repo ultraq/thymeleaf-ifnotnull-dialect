@@ -16,8 +16,6 @@
 
 package nz.net.ultraq.thymeleaf.texts
 
-import nz.net.ultraq.thymeleaf.IfNotNullDialect
-
 import org.thymeleaf.context.ITemplateContext
 import org.thymeleaf.engine.AttributeName
 import org.thymeleaf.model.IProcessableElementTag
@@ -40,12 +38,11 @@ class UTextProcessor extends AbstractAttributeTagProcessor {
 	/**
 	 * Constructor, set this processor to work on the 'utext' attribute.
 	 * 
-	 * @param dialect
 	 * @param dialectPrefix
 	 */
-	UTextProcessor(IfNotNullDialect dialect, String dialectPrefix) {
+	UTextProcessor(String dialectPrefix) {
 
-		super(dialect, TemplateMode.HTML, dialectPrefix, null, false, PROCESSOR_NAME, true,
+		super(TemplateMode.HTML, dialectPrefix, null, false, PROCESSOR_NAME, true,
 			StandardUtextTagProcessor.PRECEDENCE + 1, true)
 	}
 
@@ -57,15 +54,11 @@ class UTextProcessor extends AbstractAttributeTagProcessor {
 	 * @param tag
 	 * @param attributeName
 	 * @param attributeValue
-	 * @param attributeTemplateName
-	 * @param attributeLine
-	 * @param attributeCol
 	 * @param structureHandler
 	 */
 	@Override
 	protected void doProcess(ITemplateContext context, IProcessableElementTag tag,
-		AttributeName attributeName, String attributeValue, String attributeTemplateName,
-		int attributeLine, int attributeCol, IElementTagStructureHandler structureHandler) {
+		AttributeName attributeName, String attributeValue, IElementTagStructureHandler structureHandler) {
 
 		def output = StandardExpressions.getExpressionParser(context.configuration)
 			.parseExpression(context, attributeValue)
