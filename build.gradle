@@ -23,12 +23,12 @@ project.year     = '2015'
 dependencies {
 	compile(
 		'org.codehaus.groovy:groovy:2.4.6',
-		'org.thymeleaf:thymeleaf:3.0.0.BETA02'
+		'org.thymeleaf:thymeleaf:3.0.0.BETA03'
 	)
 	testCompile(
 		'junit:junit:4.12',
 		'nz.net.ultraq.thymeleaf:thymeleaf-testing-junit:2.0.0-SNAPSHOT',
-		'org.thymeleaf:thymeleaf-testing:3.0.0.BETA02'
+		'org.thymeleaf:thymeleaf-testing:3.0.0.BETA03'
 	)
 	testRuntime(
 		'org.slf4j:slf4j-simple:1.7.12'
