@@ -19,19 +19,40 @@ package nz.net.ultraq.thymeleaf
 import nz.net.ultraq.thymeleaf.texts.TextProcessor
 import nz.net.ultraq.thymeleaf.texts.UTextProcessor
 
-import org.thymeleaf.dialect.AbstractDialect
+import org.thymeleaf.dialect.AbstractProcessorDialect
 import org.thymeleaf.processor.IProcessor
+import org.thymeleaf.standard.StandardDialect
+import org.thymeleaf.standard.processor.StandardXmlNsTagProcessor
+import org.thymeleaf.templatemode.TemplateMode
 
 /**
  * Dialect to add the if-not-null processors for use in Thymeleaf templates.
  * 
  * @author Emanuel Rabina
  */
-class IfNotNullDialect extends AbstractDialect {
+class IfNotNullDialect extends AbstractProcessorDialect {
 
-	final String prefix = 'ifnotnull'
-	final Set<IProcessor> processors = [
-		new TextProcessor(),
-		new UTextProcessor()
-	]
+	static final String DIALECT_NAME   = 'if-not-null'
+	static final String DIALECT_PREFIX = 'ifnotnull'
+
+	/**
+	 * Constructor, initializes this dialect.
+	 */
+	IfNotNullDialect() {
+
+		super(DIALECT_NAME, DIALECT_PREFIX, StandardDialect.PROCESSOR_PRECEDENCE)
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	Set<IProcessor> getProcessors(String dialectPrefix) {
+
+		return [
+			new StandardXmlNsTagProcessor(TemplateMode.HTML, dialectPrefix),
+			new TextProcessor(dialectPrefix),
+			new UTextProcessor(dialectPrefix)
+		] as Set
+	}
 }

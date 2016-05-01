@@ -7,8 +7,7 @@ value = "Something"
 
 %INPUT
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:ifnotnull="http://www.ultraq.net.nz/thymeleaf/ifnotnull">
+<html>
 	<body>
 		<p ifnotnull:text="${value}"></p>
 	</body>
@@ -16,7 +15,7 @@ value = "Something"
 
 %OUTPUT
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 	<body>
 		<p>Something</p>
 	</body>
