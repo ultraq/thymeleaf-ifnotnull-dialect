@@ -16,9 +16,9 @@
 
 apply plugin: 'groovy'
 apply plugin: 'maven'
-apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/1.2.2/gradle-support.gradle'
-apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/1.2.2/maven-support.gradle'
-apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/1.2.2/bundle.gradle'
+apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/1.3.0/gradle-support.gradle'
+apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/1.3.0/maven-support.gradle'
+apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/1.3.0/bundle.gradle'
 
 //project.name = 'Thymeleaf If-Not-Null Dialect'
 project.description = 'Output elements and values only if the value exist'
@@ -43,10 +43,4 @@ dependencies {
 	testRuntime(
 		'org.slf4j:slf4j-simple:1.7.12'
 	)
-}
-
-test {
-	testLogging {
-		events 'standard_out'
-	}
 }
