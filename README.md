@@ -14,8 +14,8 @@ basically a combination of `th:if` with `th:text`/`th:utext`.
 Installation
 ------------
 
-Minimum of Java 7 and Thymeleaf 3.0 required.  If you're looking for a version
-of this dialect for Thymeleaf 2.1, use the 1.0 releases instead.
+Minimum of Java 7 and Thymeleaf 3.0 required.  For Thymeleaf 2.1, check out the
+1.x releases.
 
 ### Standalone distribution
 Copy the JAR from [one of the release bundles](https://github.com/ultraq/thymeleaf-ifnotnull-dialect/releases),

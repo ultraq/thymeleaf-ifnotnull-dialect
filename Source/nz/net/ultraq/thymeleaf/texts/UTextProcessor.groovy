@@ -26,24 +26,25 @@ import org.thymeleaf.standard.processor.StandardUtextTagProcessor
 import org.thymeleaf.templatemode.TemplateMode
 
 /**
- * Attribute processor for 'ifnotnull:utext', outputs unescaped text if the
- * value referenced is not null.
+ * Attribute processor for {@code ifnotnull:utext}, outputs unescaped text if
+ * the value referenced is not null.
  * 
  * @author Emanuel Rabina
  */
 class UTextProcessor extends AbstractAttributeTagProcessor {
 
-	static final String PROCESSOR_NAME = 'utext'
+	static final String NAME = 'utext'
 
 	/**
-	 * Constructor, set this processor to work on the 'utext' attribute.
+	 * Constructor, set this processor to work on the {@code ifnotnull:utext}
+	 * attribute.
 	 * 
+	 * @param templateMode
 	 * @param dialectPrefix
 	 */
-	UTextProcessor(String dialectPrefix) {
+	UTextProcessor(TemplateMode templateMode, String dialectPrefix) {
 
-		super(TemplateMode.HTML, dialectPrefix, null, false, PROCESSOR_NAME, true,
-			StandardUtextTagProcessor.PRECEDENCE + 1, true)
+		super(templateMode, dialectPrefix, null, false, NAME, true, StandardUtextTagProcessor.PRECEDENCE + 1, true)
 	}
 
 	/**
@@ -60,6 +61,8 @@ class UTextProcessor extends AbstractAttributeTagProcessor {
 	protected void doProcess(ITemplateContext context, IProcessableElementTag tag,
 		AttributeName attributeName, String attributeValue, IElementTagStructureHandler structureHandler) {
 
+		// TODO: This expression processing is also used in the layout dialect.
+		//       Create a new shared module for this code!
 		def output = StandardExpressions.getExpressionParser(context.configuration)
 			.parseExpression(context, attributeValue)
 			.execute(context)

@@ -32,7 +32,7 @@ import org.thymeleaf.templatemode.TemplateMode
  */
 class IfNotNullDialect extends AbstractProcessorDialect {
 
-	static final String DIALECT_NAME   = 'if-not-null'
+	static final String DIALECT_NAME   = 'If-Not-Null'
 	static final String DIALECT_PREFIX = 'ifnotnull'
 
 	/**
@@ -44,15 +44,22 @@ class IfNotNullDialect extends AbstractProcessorDialect {
 	}
 
 	/**
-	 * {@inheritDoc}
+	 * Returns the {@code text} and {@code utext} processors for the dialect.
+	 * 
+	 * @param dialectPrefix
+	 * @return Set of new if-not-null processors.
 	 */
 	@Override
 	Set<IProcessor> getProcessors(String dialectPrefix) {
 
 		return [
 			new StandardXmlNsTagProcessor(TemplateMode.HTML, dialectPrefix),
-			new TextProcessor(dialectPrefix),
-			new UTextProcessor(dialectPrefix)
-		] as Set
+			new TextProcessor(TemplateMode.HTML, dialectPrefix),
+			new UTextProcessor(TemplateMode.HTML, dialectPrefix),
+
+			new StandardXmlNsTagProcessor(TemplateMode.XML, dialectPrefix),
+			new TextProcessor(TemplateMode.XML, dialectPrefix),
+			new UTextProcessor(TemplateMode.XML, dialectPrefix)
+		]
 	}
 }

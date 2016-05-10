@@ -27,24 +27,25 @@ import org.thymeleaf.templatemode.TemplateMode
 import org.unbescape.html.HtmlEscape
 
 /**
- * Attribute processor for 'ifnotnull:text', outputs text if the value
+ * Attribute processor for {@code ifnotnull:text}, outputs text if the value
  * referenced is not null.
  * 
  * @author Emanuel Rabina
  */
 class TextProcessor extends AbstractAttributeTagProcessor {
 
-	static final String PROCESSOR_NAME = 'text'
+	static final String NAME = 'text'
 
 	/**
-	 * Constructor, set this processor to work on the 'text' attribute.
+	 * Constructor, set this processor to work on the {@code ifnotnull:text}
+	 * attribute.
 	 * 
+	 * @param templateMode
 	 * @param dialectPrefix
 	 */
-	TextProcessor(String dialectPrefix) {
+	TextProcessor(TemplateMode templateMode, String dialectPrefix) {
 
-		super(TemplateMode.HTML, dialectPrefix, null, false, PROCESSOR_NAME, true,
-			StandardTextTagProcessor.PRECEDENCE + 1, true)
+		super(templateMode, dialectPrefix, null, false, NAME, true, StandardTextTagProcessor.PRECEDENCE + 1, true)
 	}
 
 	/**
