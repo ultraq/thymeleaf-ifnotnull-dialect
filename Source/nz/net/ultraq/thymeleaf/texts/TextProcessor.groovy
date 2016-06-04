@@ -66,7 +66,7 @@ class TextProcessor extends AbstractAttributeTagProcessor {
 			.parseExpression(context, attributeValue)
 			.execute(context)
 		if (output) {
-			structureHandler.setBody(HtmlEscape.escapeHtml5(output.toString()), false)
+			structureHandler.setBody(HtmlEscape.escapeHtml5Xml(output.toString()), false)
 		}
 		else {
 			structureHandler.removeElement()

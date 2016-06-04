@@ -2,6 +2,10 @@
 Changelog
 =========
 
+### 2.0.1
+ - Use a lower level of escaping for `ifnotnull:text` for faster performance and
+   to be more in line with what Thymeleaf's `th:text` processor does.
+
 ### 2.0.0
  - Dialect updated to work with Thymeleaf 3.0
 
