@@ -16,12 +16,13 @@
 
 package nz.net.ultraq.thymeleaf.texts
 
+import nz.net.ultraq.thymeleaf.expressions.ExpressionProcessor
+
 import org.thymeleaf.context.ITemplateContext
 import org.thymeleaf.engine.AttributeName
 import org.thymeleaf.model.IProcessableElementTag
 import org.thymeleaf.processor.element.AbstractAttributeTagProcessor
 import org.thymeleaf.processor.element.IElementTagStructureHandler
-import org.thymeleaf.standard.expression.StandardExpressions
 import org.thymeleaf.standard.processor.StandardUtextTagProcessor
 import org.thymeleaf.templatemode.TemplateMode
 
@@ -61,11 +62,7 @@ class UTextProcessor extends AbstractAttributeTagProcessor {
 	protected void doProcess(ITemplateContext context, IProcessableElementTag tag,
 		AttributeName attributeName, String attributeValue, IElementTagStructureHandler structureHandler) {
 
-		// TODO: This expression processing is also used in the layout dialect.
-		//       Create a new shared module for this code!
-		def output = StandardExpressions.getExpressionParser(context.configuration)
-			.parseExpression(context, attributeValue)
-			.execute(context)
+		def output = new ExpressionProcessor(context).process(attributeValue)
 		if (output) {
 			structureHandler.setBody(output.toString(), false)
 		}

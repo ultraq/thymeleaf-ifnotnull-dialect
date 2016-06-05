@@ -2,9 +2,11 @@
 Changelog
 =========
 
-### 2.0.1
+### 2.1.0
  - Use a lower level of escaping for `ifnotnull:text` for faster performance and
    to be more in line with what Thymeleaf's `th:text` processor does.
+ - Extracted expression processing into a new [Thymeleaf Expression Processor](https://github.com/ultraq/thymeleaf-expression-processor)
+   module
 
 ### 2.0.0
  - Dialect updated to work with Thymeleaf 3.0

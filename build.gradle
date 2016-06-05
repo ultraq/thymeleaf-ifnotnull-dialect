@@ -27,11 +27,12 @@ project.sourceCompatibility = '1.7'
 
 project.group    = 'nz.net.ultraq.thymeleaf'
 project.artifact = 'thymeleaf-ifnotnull-dialect'
-project.version  = '2.0.0'
+project.version  = '2.1.0-SNAPSHOT'
 project.year     = '2015'
 
 dependencies {
 	compile(
+		'nz.net.ultraq.thymeleaf:thymeleaf-expression-processor:1.0.0-SNAPSHOT',
 		'org.codehaus.groovy:groovy:2.4.6',
 		'org.thymeleaf:thymeleaf:3.0.0.RELEASE'
 	)
