@@ -1,6 +1,6 @@
 # Test that unescaped text which is missing isn't output 
 
-%TEMPLATE_MODE HTML5
+%TEMPLATE_MODE HTML
 
 %INPUT
 <!DOCTYPE html>

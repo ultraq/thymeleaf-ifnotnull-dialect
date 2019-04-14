@@ -1,6 +1,6 @@
 # Test that unescaped text which is present is output 
 
-%TEMPLATE_MODE HTML5
+%TEMPLATE_MODE HTML
 
 %CONTEXT
 value = "<b>Something</b>"
