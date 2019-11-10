@@ -76,7 +76,7 @@ it's not `null`, outputs the element and the result of the expression to the
 `src` attribute of the element.
 
 ```html
-<img ifnotnull:src="${myObject.imageUrl}" th:alt="${myObject.imageAltText}"/>
+<img ifnotnull:src="${myObject.imageUrl}"/>
 ```
 
 ### text
