@@ -24,24 +24,22 @@ plugins {
 apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/2.1.0/gradle-support.gradle'
 apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/2.1.0/maven-support.gradle'
 
-//project.name = 'thymeleaf-ifnotnull-dialect'
 project.description = 'Output elements and values only if the value exist'
 project.archivesBaseName = 'thymeleaf-ifnotnull-dialect'
-project.sourceCompatibility = '1.7'
+project.sourceCompatibility = '1.8'
 
 project.group    = 'nz.net.ultraq.thymeleaf'
 project.artifact = 'thymeleaf-ifnotnull-dialect'
-project.version  = '2.1.0'
+project.version  = '3.0.0-SNAPSHOT'
 project.year     = '2015'
 
 dependencies {
 	compile(
-		'nz.net.ultraq.thymeleaf:thymeleaf-expression-processor:1.0.0',
-		'org.codehaus.groovy:groovy:2.4.6',
+		'nz.net.ultraq.thymeleaf:thymeleaf-expression-processor:1.2.0-SNAPSHOT',
+		'org.codehaus.groovy:groovy:2.5.8',
 		'org.thymeleaf:thymeleaf:3.0.0.RELEASE'
 	)
 	testCompile(
-		'junit:junit:4.12',
 		'nz.net.ultraq.thymeleaf:thymeleaf-testing-junit:2.2.0',
 		'org.thymeleaf:thymeleaf-testing:3.0.0.RELEASE'
 	)
@@ -52,8 +50,4 @@ dependencies {
 
 groovydoc {
 	link('http://www.thymeleaf.org/apidocs/thymeleaf/3.0.0.RELEASE/', 'org.thymeleaf.')
-}
-
-cobertura {
-	coverageFormats = ['html', 'xml']
 }
