@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package nz.net.ultraq.thymeleaf.texts
+package nz.net.ultraq.thymeleaf.ifnotnull.processors
 
 import nz.net.ultraq.thymeleaf.expressions.ExpressionProcessor
 

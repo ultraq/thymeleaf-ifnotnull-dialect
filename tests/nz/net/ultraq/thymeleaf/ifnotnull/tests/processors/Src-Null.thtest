@@ -1,0 +1,18 @@
+# Test that the <img> element is removed 
+
+%TEMPLATE_MODE HTML
+
+%INPUT
+<!DOCTYPE html>
+<html>
+	<body>
+		<img ifnotnull:src="${value}"/>
+	</body>
+</html>
+
+%OUTPUT
+<!DOCTYPE html>
+<html>
+	<body>
+	</body>
+</html>

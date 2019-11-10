@@ -14,10 +14,11 @@
  * limitations under the License.
  */
 
-package nz.net.ultraq.thymeleaf
+package nz.net.ultraq.thymeleaf.ifnotnull
 
-import nz.net.ultraq.thymeleaf.texts.TextProcessor
-import nz.net.ultraq.thymeleaf.texts.UTextProcessor
+import nz.net.ultraq.thymeleaf.ifnotnull.processors.SrcProcessor
+import nz.net.ultraq.thymeleaf.ifnotnull.processors.TextProcessor
+import nz.net.ultraq.thymeleaf.ifnotnull.processors.UTextProcessor
 
 import org.thymeleaf.dialect.AbstractProcessorDialect
 import org.thymeleaf.processor.IProcessor
@@ -44,7 +45,7 @@ class IfNotNullDialect extends AbstractProcessorDialect {
 	}
 
 	/**
-	 * Returns the {@code text} and {@code utext} processors for the dialect.
+	 * Returns the processors for the dialect.
 	 * 
 	 * @param dialectPrefix
 	 * @return Set of new if-not-null processors.
@@ -54,10 +55,12 @@ class IfNotNullDialect extends AbstractProcessorDialect {
 
 		return [
 			new StandardXmlNsTagProcessor(TemplateMode.HTML, dialectPrefix),
+			new SrcProcessor(TemplateMode.HTML, dialectPrefix),
 			new TextProcessor(TemplateMode.HTML, dialectPrefix),
 			new UTextProcessor(TemplateMode.HTML, dialectPrefix),
 
 			new StandardXmlNsTagProcessor(TemplateMode.XML, dialectPrefix),
+			new SrcProcessor(TemplateMode.XML, dialectPrefix),
 			new TextProcessor(TemplateMode.XML, dialectPrefix),
 			new UTextProcessor(TemplateMode.XML, dialectPrefix)
 		]

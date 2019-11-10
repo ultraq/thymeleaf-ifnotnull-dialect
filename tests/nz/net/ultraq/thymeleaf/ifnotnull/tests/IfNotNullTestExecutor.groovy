@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package nz.net.ultraq.thymeleaf.tests
+package nz.net.ultraq.thymeleaf.ifnotnull.tests
 
-import nz.net.ultraq.thymeleaf.IfNotNullDialect
+import nz.net.ultraq.thymeleaf.ifnotnull.IfNotNullDialect
 import nz.net.ultraq.thymeleaf.testing.JUnitTestExecutorAll
 
 import org.thymeleaf.dialect.IDialect

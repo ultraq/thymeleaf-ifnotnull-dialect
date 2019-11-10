@@ -9,19 +9,16 @@ Thymeleaf If-Not-Null Dialect
 [![License](https://img.shields.io/github/license/ultraq/thymeleaf-ifnotnull-dialect.svg?maxAge=2592000)](https://github.com/ultraq/thymeleaf-ifnotnull-dialect/blob/master/LICENSE.txt)
 
 A dialect that outputs elements and values only if the value exist.  It's
-basically a combination of `th:if` with `th:text`/`th:utext`.
+basically a combination of `th:if` with the underlying Thymeleaf processor it
+mimics, eg: `ifnotnull:text` = `th:if` + `th:text`.
 
 
 Installation
 ------------
 
-Minimum of Java 7 and Thymeleaf 3.0 required.  For Thymeleaf 2.1, check out the
-1.x releases.
-
-### Standalone distribution
-Copy the JAR from [one of the release bundles](https://github.com/ultraq/thymeleaf-ifnotnull-dialect/releases),
-placing it in the classpath of your program, or build the project from the
-source code here on GitHub.
+Minimum of Java 8 and Thymeleaf 3.0 required.  For use with older versions of
+Java or Thymeleaf, check out previous releases by exploring the [releases](https://github.com/ultraq/thymeleaf-ifnotnull-dialect/releases)
+page.
 
 ### For Maven and Maven-compatible dependency managers
 Add a dependency to your project with the following co-ordinates:
@@ -30,33 +27,57 @@ Add a dependency to your project with the following co-ordinates:
  - ArtifactId: `thymeleaf-ifnotnull-dialect`
  - Version: (as per the badges above)
 
+### Standalone distribution
+Copy the JAR from [one of the release bundles](https://github.com/ultraq/thymeleaf-ifnotnull-dialect/releases),
+placing it in the classpath of your program, or build the project from the
+source code here on GitHub.
+
 
 Usage
 -----
 
 Add the If-Not-Null dialect to your existing Thymeleaf template engine, eg:
 
-Java example:
+For those configuring their own Thymeleaf template engine:
 
 ```java
+TemplateEngine templateEngine = new TemplateEngine();
 templateEngine.addDialect(new IfNotNullDialect());
 ```
 
-Spring XML configuration example:
+For those using Spring Boot with Java Configuration:
+
+```java
+@Bean
+public IfNotNullDialect ifNotNullDialect() {
+  return new IfNotNullDialect();
+}
+```
+
+For those using Spring XML for configuration:
 
 ```xml
-<bean id="templateEngine" class="org.thymeleaf.spring3.SpringTemplateEngine">
-  ...
+<bean id="templateEngine" class="org.thymeleaf.spring5.SpringTemplateEngine">
   <property name="additionalDialects">
     <set>
-      <bean class="nz.net.ultraq.thymeleaf.IfNotNullDialect"/>
+      <bean class="nz.net.ultraq.thymeleaf.ifnotnull.IfNotNullDialect"/>
     </set>
   </property>
 </bean>
 ```
 
-This will introduce the `ifnotnull` namepace, and 2 new attribute processors
-that you can use in your pages: `text`, and `utext`.
+This will introduce the `ifnotnull` namepace, and some new attribute processors
+that you can use in your pages, outlined below:
+
+### src
+
+A combination of `th:if` and `th:src`, runs the expression given to it and, if
+it's not `null`, outputs the element and the result of the expression to the
+`src` attribute of the element.
+
+```html
+<img ifnotnull:src="${myObject.imageUrl}" th:alt="${myObject.imageAltText}"/>
+```
 
 ### text
 

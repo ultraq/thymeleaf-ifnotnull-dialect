@@ -1,0 +1,22 @@
+# Test that the src attribute and element is output when present 
+
+%TEMPLATE_MODE HTML
+
+%CONTEXT
+value = "Something"
+
+%INPUT
+<!DOCTYPE html>
+<html>
+	<body>
+		<img ifnotnull:src="${value}"/>
+	</body>
+</html>
+
+%OUTPUT
+<!DOCTYPE html>
+<html>
+	<body>
+		<img src="Something"/>
+	</body>
+</html>
