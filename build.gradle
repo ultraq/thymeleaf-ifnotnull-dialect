@@ -24,26 +24,26 @@ plugins {
 apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/2.1.0/gradle-support.gradle'
 apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/2.1.0/maven-support.gradle'
 
-project.description = 'Output elements and values only if the value exist'
-project.archivesBaseName = 'thymeleaf-ifnotnull-dialect'
-project.sourceCompatibility = '1.8'
+description = 'Output elements and values only if the value exist'
+archivesBaseName = 'thymeleaf-ifnotnull-dialect'
+sourceCompatibility = '1.8'
 
-project.group    = 'nz.net.ultraq.thymeleaf'
-project.artifact = 'thymeleaf-ifnotnull-dialect'
-project.version  = '3.0.0-SNAPSHOT'
-project.year     = '2015'
+group    = 'nz.net.ultraq.thymeleaf'
+artifact = 'thymeleaf-ifnotnull-dialect'
+version  = '3.0.0-SNAPSHOT'
+year     = '2015'
 
 dependencies {
-	compile(
+	implementation(
 		'nz.net.ultraq.thymeleaf:thymeleaf-expression-processor:1.2.0-SNAPSHOT',
 		'org.codehaus.groovy:groovy:2.5.8',
 		'org.thymeleaf:thymeleaf:3.0.0.RELEASE'
 	)
-	testCompile(
+	testImplementation(
 		'nz.net.ultraq.thymeleaf:thymeleaf-testing-junit:2.2.0',
 		'org.thymeleaf:thymeleaf-testing:3.0.0.RELEASE'
 	)
-	testRuntime(
+	testRuntimeOnly(
 		'org.slf4j:slf4j-simple:1.7.12'
 	)
 }
