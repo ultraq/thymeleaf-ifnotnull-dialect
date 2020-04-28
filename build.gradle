@@ -18,11 +18,11 @@ plugins {
 	id 'groovy'
 	id 'codenarc'
 	id 'maven'
-	id 'net.saliman.cobertura' version '2.5.2'
-	id 'com.github.kt3k.coveralls' version '2.8.2'
+	id 'jacoco'
+	id 'com.github.kt3k.coveralls' version '2.10.1'
 }
-apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/2.1.0/gradle-support.gradle'
-apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/2.1.0/maven-support.gradle'
+apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/2.3.0/gradle-support.gradle'
+apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/2.3.0/maven-support.gradle'
 
 description = 'Output elements and values only if the value exist'
 archivesBaseName = 'thymeleaf-ifnotnull-dialect'
@@ -36,12 +36,12 @@ year     = '2015'
 dependencies {
 	implementation(
 		'nz.net.ultraq.thymeleaf:thymeleaf-expression-processor:1.2.0-SNAPSHOT',
-		'org.codehaus.groovy:groovy:2.5.8',
-		'org.thymeleaf:thymeleaf:3.0.0.RELEASE'
+		'org.codehaus.groovy:groovy:3.0.3',
+		'org.thymeleaf:thymeleaf:3.0.11.RELEASE'
 	)
 	testImplementation(
-		'nz.net.ultraq.thymeleaf:thymeleaf-testing-junit:2.2.0',
-		'org.thymeleaf:thymeleaf-testing:3.0.0.RELEASE'
+		'nz.net.ultraq.thymeleaf:thymeleaf-testing-junit:3.0.0-SNAPSHOT',
+		'org.thymeleaf:thymeleaf-testing:3.0.4.RELEASE'
 	)
 	testRuntimeOnly(
 		'org.slf4j:slf4j-simple:1.7.12'
@@ -49,5 +49,5 @@ dependencies {
 }
 
 groovydoc {
-	link('http://www.thymeleaf.org/apidocs/thymeleaf/3.0.0.RELEASE/', 'org.thymeleaf.')
+	link('http://www.thymeleaf.org/apidocs/thymeleaf/3.0.11.RELEASE/', 'org.thymeleaf.')
 }
