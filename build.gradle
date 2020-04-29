@@ -22,8 +22,8 @@ plugins {
 	id 'com.github.kt3k.coveralls' version '2.10.1'
 	id 'distribution'
 }
-apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/3.0.0/gradle-support.gradle'
-apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/3.0.0/maven-support.gradle'
+apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/3.0.1/gradle-support.gradle'
+apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/3.0.1/maven-support.gradle'
 
 description = 'Output elements and values only if the value exist'
 archivesBaseName = 'thymeleaf-ifnotnull-dialect'
