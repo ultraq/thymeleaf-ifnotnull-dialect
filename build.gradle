@@ -20,9 +20,10 @@ plugins {
 	id 'maven'
 	id 'jacoco'
 	id 'com.github.kt3k.coveralls' version '2.10.1'
+	id 'distribution'
 }
-apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/2.3.0/gradle-support.gradle'
-apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/2.3.0/maven-support.gradle'
+apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/3.0.0/gradle-support.gradle'
+apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/3.0.0/maven-support.gradle'
 
 description = 'Output elements and values only if the value exist'
 archivesBaseName = 'thymeleaf-ifnotnull-dialect'
@@ -30,7 +31,7 @@ sourceCompatibility = '1.8'
 
 group    = 'nz.net.ultraq.thymeleaf'
 artifact = 'thymeleaf-ifnotnull-dialect'
-version  = '3.0.0-SNAPSHOT'
+version  = '3.0.0'
 year     = '2015'
 
 dependencies {
@@ -40,7 +41,7 @@ dependencies {
 		'org.thymeleaf:thymeleaf:3.0.11.RELEASE'
 	)
 	testImplementation(
-		'nz.net.ultraq.thymeleaf:thymeleaf-testing-junit:3.0.0-SNAPSHOT',
+		'nz.net.ultraq.thymeleaf:thymeleaf-testing-junit:3.0.0',
 		'org.thymeleaf:thymeleaf-testing:3.0.4.RELEASE'
 	)
 	testRuntimeOnly(
