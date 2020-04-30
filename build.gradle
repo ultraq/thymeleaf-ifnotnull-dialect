@@ -17,16 +17,15 @@
 plugins {
 	id 'groovy'
 	id 'codenarc'
-	id 'maven'
 	id 'jacoco'
 	id 'com.github.kt3k.coveralls' version '2.10.1'
 	id 'distribution'
+	id 'maven-publish'
 }
-apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/3.0.1/gradle-support.gradle'
-apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/3.0.1/maven-support.gradle'
+apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/3.1.1/gradle-support.gradle'
+apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/3.1.1/maven-publish-support.gradle'
 
 description = 'Output elements and values only if the value exist'
-archivesBaseName = 'thymeleaf-ifnotnull-dialect'
 sourceCompatibility = '1.8'
 
 group    = 'nz.net.ultraq.thymeleaf'
@@ -36,7 +35,7 @@ year     = '2015'
 
 dependencies {
 	implementation(
-		'nz.net.ultraq.thymeleaf:thymeleaf-expression-processor:1.2.0-SNAPSHOT',
+		'nz.net.ultraq.thymeleaf:thymeleaf-expression-processor:2.0.0',
 		'org.codehaus.groovy:groovy:3.0.3',
 		'org.thymeleaf:thymeleaf:3.0.11.RELEASE'
 	)
