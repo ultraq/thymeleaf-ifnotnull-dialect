@@ -5,7 +5,7 @@ Changelog
 ### 3.0.0
  - Minimum required Java version is now 8
  - Upgrade to Groovy 3.0.3
- - Upgrade Thymeleaf Expression Processor to 1.2.0
+ - Upgrade Thymeleaf Expression Processor to 2.0.0
  - Added a `ifnotnull:src` processor
 
 ### 2.1.0
