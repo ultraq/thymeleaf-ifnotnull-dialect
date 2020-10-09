@@ -15,6 +15,7 @@
  */
 
 plugins {
+	id 'java-library'
 	id 'groovy'
 	id 'codenarc'
 	id 'jacoco'
@@ -22,21 +23,23 @@ plugins {
 	id 'distribution'
 	id 'maven-publish'
 }
-apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/3.1.2/gradle-support.gradle'
-apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/3.1.2/maven-publish-support.gradle'
+apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/3.2.1/gradle-support.gradle'
+apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/3.2.1/maven-publish-support.gradle'
 
 description = 'Output elements and values only if the value exist'
 sourceCompatibility = '1.8'
 
 group    = 'nz.net.ultraq.thymeleaf'
 artifact = 'thymeleaf-ifnotnull-dialect'
-version  = '3.0.0'
+version  = '3.0.1-SNAPSHOT'
 year     = '2015'
 
 dependencies {
+	api(
+		'org.codehaus.groovy:groovy:3.0.3'
+	)
 	implementation(
 		'nz.net.ultraq.thymeleaf:thymeleaf-expression-processor:2.0.0',
-		'org.codehaus.groovy:groovy:3.0.3',
 		'org.thymeleaf:thymeleaf:3.0.11.RELEASE'
 	)
 	testImplementation(
@@ -46,11 +49,6 @@ dependencies {
 	testRuntimeOnly(
 		'org.slf4j:slf4j-simple:1.7.12'
 	)
-	// Needed for Codenarc to work on Java 14 for now, see: https://github.com/gradle/gradle/issues/12646
-	constraints {
-		codenarc('org.codehaus.groovy:groovy:3.0.3')
-		codenarc('org.codehaus.groovy:groovy-xml:3.0.3')
-	}
 }
 
 groovydoc {
