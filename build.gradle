@@ -31,7 +31,7 @@ sourceCompatibility = '1.8'
 
 group    = 'nz.net.ultraq.thymeleaf'
 artifact = 'thymeleaf-ifnotnull-dialect'
-version  = '3.0.1'
+version  = '3.0.2-SNAPSHOT'
 year     = '2015'
 
 dependencies {
@@ -40,10 +40,10 @@ dependencies {
 	)
 	implementation(
 		'nz.net.ultraq.thymeleaf:thymeleaf-expression-processor:2.0.0',
-		'org.thymeleaf:thymeleaf:3.0.11.RELEASE'
+		'org.thymeleaf:thymeleaf:3.0.12.RELEASE'
 	)
 	testImplementation(
-		'nz.net.ultraq.thymeleaf:thymeleaf-testing-junit:3.0.0',
+		'nz.net.ultraq.thymeleaf:thymeleaf-testing-junit:3.0.1',
 		'org.thymeleaf:thymeleaf-testing:3.0.4.RELEASE'
 	)
 	testRuntimeOnly(
@@ -52,5 +52,5 @@ dependencies {
 }
 
 groovydoc {
-	link('http://www.thymeleaf.org/apidocs/thymeleaf/3.0.11.RELEASE/', 'org.thymeleaf.')
+	link('http://www.thymeleaf.org/apidocs/thymeleaf/3.0.12.RELEASE/', 'org.thymeleaf.')
 }
