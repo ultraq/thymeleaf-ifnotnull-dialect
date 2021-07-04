@@ -36,19 +36,23 @@ year     = '2015'
 
 dependencies {
 	api(
-		'org.codehaus.groovy:groovy:3.0.3'
+		'org.codehaus.groovy:groovy:3.0.8'
 	)
 	implementation(
-		'nz.net.ultraq.thymeleaf:thymeleaf-expression-processor:2.0.0',
+		'nz.net.ultraq.thymeleaf:thymeleaf-expression-processor:2.0.1',
 		'org.thymeleaf:thymeleaf:3.0.12.RELEASE'
 	)
 	testImplementation(
-		'nz.net.ultraq.thymeleaf:thymeleaf-testing-junit:3.0.1',
+		'nz.net.ultraq.thymeleaf:thymeleaf-testing-junit:4.0.0-SNAPSHOT',
 		'org.thymeleaf:thymeleaf-testing:3.0.4.RELEASE'
 	)
 	testRuntimeOnly(
 		'org.slf4j:slf4j-simple:1.7.12'
 	)
+}
+
+test {
+	useJUnitPlatform()
 }
 
 groovydoc {
