@@ -47,7 +47,7 @@ dependencies {
 		'org.thymeleaf:thymeleaf-testing:3.0.4.RELEASE'
 	)
 	testRuntimeOnly(
-		'org.slf4j:slf4j-simple:1.7.12'
+		'org.slf4j:slf4j-simple:1.7.32'
 	)
 }
 
