@@ -16,7 +16,7 @@
 
 package nz.net.ultraq.thymeleaf.ifnotnulldialect.processors
 
-import nz.net.ultraq.thymeleaf.expressions.ExpressionProcessor
+import nz.net.ultraq.thymeleaf.expressionprocessor.ExpressionProcessor
 
 import org.thymeleaf.context.ITemplateContext
 import org.thymeleaf.engine.AttributeName
