@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package nz.net.ultraq.thymeleaf.ifnotnull.processors
+package nz.net.ultraq.thymeleaf.ifnotnulldialect.processors
 
 import nz.net.ultraq.thymeleaf.expressions.ExpressionProcessor
 
@@ -23,35 +23,34 @@ import org.thymeleaf.engine.AttributeName
 import org.thymeleaf.model.IProcessableElementTag
 import org.thymeleaf.processor.element.AbstractAttributeTagProcessor
 import org.thymeleaf.processor.element.IElementTagStructureHandler
-import org.thymeleaf.standard.processor.StandardTextTagProcessor
+import org.thymeleaf.standard.processor.StandardUtextTagProcessor
 import org.thymeleaf.templatemode.TemplateMode
-import org.unbescape.html.HtmlEscape
 
 /**
- * Attribute processor for {@code ifnotnull:text}, outputs text if the value
- * referenced is not null.
+ * Attribute processor for {@code ifnotnull:utext}, outputs unescaped text if
+ * the value referenced is not null.
  * 
  * @author Emanuel Rabina
  */
-class TextProcessor extends AbstractAttributeTagProcessor {
+class UTextProcessor extends AbstractAttributeTagProcessor {
 
-	static final String NAME = 'text'
+	static final String NAME = 'utext'
 
 	/**
-	 * Constructor, set this processor to work on the {@code ifnotnull:text}
+	 * Constructor, set this processor to work on the {@code ifnotnull:utext}
 	 * attribute.
 	 * 
 	 * @param templateMode
 	 * @param dialectPrefix
 	 */
-	TextProcessor(TemplateMode templateMode, String dialectPrefix) {
+	UTextProcessor(TemplateMode templateMode, String dialectPrefix) {
 
-		super(templateMode, dialectPrefix, null, false, NAME, true, StandardTextTagProcessor.PRECEDENCE + 1, true)
+		super(templateMode, dialectPrefix, null, false, NAME, true, StandardUtextTagProcessor.PRECEDENCE + 1, true)
 	}
 
 	/**
-	 * Evaluate the expression given to this processor, outputting it as a child
-	 * text node if not null.
+	 * Evaluate the expression given to this processor, outputting it as an
+	 * unescaped child text node if not null.
 	 * 
 	 * @param context
 	 * @param tag
@@ -65,7 +64,7 @@ class TextProcessor extends AbstractAttributeTagProcessor {
 
 		def output = new ExpressionProcessor(context).process(attributeValue)
 		if (output) {
-			structureHandler.setBody(HtmlEscape.escapeHtml5Xml(output.toString()), false)
+			structureHandler.setBody(output.toString(), false)
 		}
 		else {
 			structureHandler.removeElement()

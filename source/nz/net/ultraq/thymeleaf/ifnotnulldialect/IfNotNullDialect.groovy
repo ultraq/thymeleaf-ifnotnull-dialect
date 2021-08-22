@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package nz.net.ultraq.thymeleaf.ifnotnull
+package nz.net.ultraq.thymeleaf.ifnotnulldialect
 
-import nz.net.ultraq.thymeleaf.ifnotnull.processors.SrcProcessor
-import nz.net.ultraq.thymeleaf.ifnotnull.processors.TextProcessor
-import nz.net.ultraq.thymeleaf.ifnotnull.processors.UTextProcessor
+import nz.net.ultraq.thymeleaf.ifnotnulldialect.processors.SrcProcessor
+import nz.net.ultraq.thymeleaf.ifnotnulldialect.processors.TextProcessor
+import nz.net.ultraq.thymeleaf.ifnotnulldialect.processors.UTextProcessor
 
 import org.thymeleaf.dialect.AbstractProcessorDialect
 import org.thymeleaf.processor.IProcessor

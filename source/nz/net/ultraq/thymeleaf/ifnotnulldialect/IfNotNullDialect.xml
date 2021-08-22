@@ -22,10 +22,10 @@
 	                    http://www.thymeleaf.org/xsd/thymeleaf-extras-dialect-2.1.xsd"
 	prefix="ifnotnull"
 	namespace-uri="http://www.ultraq.net.nz/thymeleaf/ifnotnull"
-	class="nz.net.ultraq.thymeleaf.ifnotnull.IfNotNullDialect">
+	class="nz.net.ultraq.thymeleaf.ifnotnulldialect.IfNotNullDialect">
 
-	<attribute-processor name="src" class="nz.net.ultraq.thymeleaf.ifnotnull.processors.SrcProcessor"/>
-	<attribute-processor name="text" class="nz.net.ultraq.thymeleaf.ifnotnull.processors.TextProcessor"/>
-	<attribute-processor name="utext" class="nz.net.ultraq.thymeleaf.ifnotnull.processors.UTextProcessor"/>
+	<attribute-processor name="src" class="nz.net.ultraq.thymeleaf.ifnotnulldialect.processors.SrcProcessor"/>
+	<attribute-processor name="text" class="nz.net.ultraq.thymeleaf.ifnotnulldialect.processors.TextProcessor"/>
+	<attribute-processor name="utext" class="nz.net.ultraq.thymeleaf.ifnotnulldialect.processors.UTextProcessor"/>
 
 </dialect>

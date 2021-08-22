@@ -31,7 +31,7 @@ sourceCompatibility = '1.8'
 
 group    = 'nz.net.ultraq.thymeleaf'
 artifact = 'thymeleaf-ifnotnull-dialect'
-version  = '3.0.2-SNAPSHOT'
+version  = '4.0.0-SNAPSHOT'
 year     = '2015'
 
 dependencies {
@@ -43,7 +43,7 @@ dependencies {
 		'org.thymeleaf:thymeleaf:3.0.12.RELEASE'
 	)
 	testImplementation(
-		'nz.net.ultraq.thymeleaf:thymeleaf-testing-junit:4.0.0-SNAPSHOT',
+		'nz.net.ultraq.thymeleaf:thymeleaf-testing-junit:5.0.0-SNAPSHOT',
 		'org.thymeleaf:thymeleaf-testing:3.0.4.RELEASE'
 	)
 	testRuntimeOnly(
@@ -57,4 +57,10 @@ test {
 
 groovydoc {
 	link('http://www.thymeleaf.org/apidocs/thymeleaf/3.0.12.RELEASE/', 'org.thymeleaf.')
+}
+
+jar {
+	manifest {
+		attributes('Automatic-Module-Name': 'nz.net.ultraq.thymeleaf.ifnotnulldialect')
+	}
 }
