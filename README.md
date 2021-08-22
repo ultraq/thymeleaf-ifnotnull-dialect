@@ -22,7 +22,7 @@ Add a dependency to your project with the following co-ordinates:
 
  - GroupId: `nz.net.ultraq.thymeleaf`
  - ArtifactId: `thymeleaf-ifnotnull-dialect`
- - Version: `3.0.1`
+ - Version: `4.0.0`
 
 Check the [project releases](https://github.com/ultraq/thymeleaf-ifnotnull-dialect/releases)
 for a list of available versions.  Each release page also includes a

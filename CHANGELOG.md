@@ -2,6 +2,11 @@
 Changelog
 =========
 
+### 4.0.0
+ - This library is now an automatic module w/ name: `nz.net.ultraq.thymeleaf.ifnotnulldialect`
+ - Packages reorganized to match the expectations of Java modules
+ - Upgrade dependencies to ones with module names as well
+
 ### 3.0.1
  - Fix generated POM - Groovy is needed as a compile dependency
 
