@@ -19,40 +19,31 @@ plugins {
 	id 'groovy'
 	id 'codenarc'
 	id 'jacoco'
-	id 'com.github.kt3k.coveralls' version '2.10.1'
 	id 'distribution'
 	id 'maven-publish'
 }
-apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/3.4.0/gradle-support.gradle'
-apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/3.4.0/maven-publish-support.gradle'
+apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/4.0.0/gradle-support.gradle'
+apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/4.0.0/maven-publish-support.gradle'
 
 description = 'Output elements and values only if the value exist'
+version = '4.1.0-SNAPSHOT'
 sourceCompatibility = '1.8'
-
-group    = 'nz.net.ultraq.thymeleaf'
-artifact = 'thymeleaf-ifnotnull-dialect'
-version  = '4.0.0'
-year     = '2015'
+group = 'nz.net.ultraq.thymeleaf'
+year = '2015'
 
 dependencies {
-	api(
-		'org.codehaus.groovy:groovy:3.0.8'
-	)
-	implementation(
-		'nz.net.ultraq.thymeleaf:thymeleaf-expression-processor:3.0.0',
-		'org.thymeleaf:thymeleaf:3.0.12.RELEASE'
-	)
-	testImplementation(
-		'nz.net.ultraq.thymeleaf:thymeleaf-testing-junit:5.0.0-SNAPSHOT',
-		'org.thymeleaf:thymeleaf-testing:3.0.4.RELEASE'
-	)
-	testRuntimeOnly(
-		'org.slf4j:slf4j-simple:1.7.32'
-	)
-}
+	api 'org.apache.groovy:groovy:4.0.0'
+	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-expression-processor:3.1.0-SNAPSHOT'
+	implementation 'org.thymeleaf:thymeleaf:3.0.15.RELEASE'
 
-compileGroovy {
-	groovyOptions.optimizationOptions.indy = true
+	codenarc('org.codenarc:CodeNarc:2.2.0') {
+		exclude group: 'org.codehaus.groovy'
+	}
+	codenarc 'org.apache.groovy:groovy-all:4.0.0'
+
+	testImplementation 'nz.net.ultraq.thymeleaf:thymeleaf-testing-junit:5.0.0-SNAPSHOT'
+	testImplementation 'org.thymeleaf:thymeleaf-testing:3.0.4.RELEASE'
+	testRuntimeOnly 'org.slf4j:slf4j-simple:1.7.32'
 }
 
 test {
@@ -60,7 +51,7 @@ test {
 }
 
 groovydoc {
-	link('http://www.thymeleaf.org/apidocs/thymeleaf/3.0.12.RELEASE/', 'org.thymeleaf.')
+	link('https://www.thymeleaf.org/apidocs/thymeleaf/3.0.15.RELEASE/', 'org.thymeleaf.')
 }
 
 jar {
