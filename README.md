@@ -3,7 +3,7 @@ Thymeleaf If-Not-Null Dialect
 =============================
 
 [![Build Status](https://github.com/ultraq/thymeleaf-ifnotnull-dialect/actions/workflows/build.yml/badge.svg)](https://github.com/ultraq/thymeleaf-ifnotnull-dialect/actions)
-[![Coverage Status](https://coveralls.io/repos/github/ultraq/thymeleaf-ifnotnull-dialect/badge.svg?branch=master)](https://coveralls.io/github/ultraq/thymeleaf-ifnotnull-dialect?branch=master)
+[![codecov](https://codecov.io/gh/ultraq/thymeleaf-ifnotnull-dialect/branch/main/graph/badge.svg?token=iaQf9Wa3r3)](https://codecov.io/gh/ultraq/thymeleaf-ifnotnull-dialect)
 [![Maven Central](https://img.shields.io/maven-central/v/nz.net.ultraq.thymeleaf/thymeleaf-ifnotnull-dialect.svg?maxAge=3600)](http://search.maven.org/#search|ga|1|g%3A%22nz.net.ultraq.thymeleaf%22%20AND%20a%3A%22thymeleaf-ifnotnull-dialect%22)
 
 A dialect that outputs elements and values only if the value exist.  It's
