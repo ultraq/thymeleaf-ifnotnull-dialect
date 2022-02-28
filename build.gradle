@@ -22,18 +22,18 @@ plugins {
 	id 'distribution'
 	id 'maven-publish'
 }
-apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/4.0.0/gradle-support.gradle'
-apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/4.0.0/maven-publish-support.gradle'
+apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/4.0.1/gradle-support.gradle'
+apply from: 'https://raw.githubusercontent.com/ultraq/gradle-support/4.0.1/maven-publish-support.gradle'
 
 description = 'Output elements and values only if the value exist'
-version = '4.1.0-SNAPSHOT'
+version = '4.1.0'
 sourceCompatibility = '1.8'
 group = 'nz.net.ultraq.thymeleaf'
 year = '2015'
 
 dependencies {
 	api 'org.apache.groovy:groovy:4.0.0'
-	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-expression-processor:3.1.0-SNAPSHOT'
+	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-expression-processor:3.1.0'
 	implementation 'org.thymeleaf:thymeleaf:3.0.15.RELEASE'
 
 	codenarc('org.codenarc:CodeNarc:2.2.0') {
@@ -41,9 +41,9 @@ dependencies {
 	}
 	codenarc 'org.apache.groovy:groovy-all:4.0.0'
 
-	testImplementation 'nz.net.ultraq.thymeleaf:thymeleaf-testing-junit:5.0.0-SNAPSHOT'
+	testImplementation 'nz.net.ultraq.thymeleaf:thymeleaf-testing-junit:5.0.0'
 	testImplementation 'org.thymeleaf:thymeleaf-testing:3.0.4.RELEASE'
-	testRuntimeOnly 'org.slf4j:slf4j-simple:1.7.32'
+	testRuntimeOnly 'org.slf4j:slf4j-simple:1.7.36'
 }
 
 test {
