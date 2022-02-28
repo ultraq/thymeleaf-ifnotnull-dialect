@@ -3,9 +3,9 @@ Changelog
 =========
 
 ### 4.1.0
-- Upgraded Groovy to 4.0.0
-- The `javadoc` artifact in Maven downloads now includes this project's
-	groovydocs, which have been missing thus far
+ - Upgraded Groovy to 4.0.0
+ - The `javadoc` artifact in Maven downloads now includes this project's
+   groovydocs, which have been missing thus far
 
 ### 4.0.0
  - This library is now an automatic module w/ name: `nz.net.ultraq.thymeleaf.ifnotnulldialect`
